@@ -33,7 +33,7 @@ func httpEtag(url string) (etag string) {
 }
 
 func httpBody(url string) (body []byte) {
-	resp, err := http.Get("http://example.com/")
+	resp, err := http.Get(url)
 	check(err)
 	defer resp.Body.Close()
 	body, err = ioutil.ReadAll(resp.Body)

@@ -8,11 +8,15 @@ function compile() {
 }
 
 
-GOOS=darwin GOARCH=386
+export GOOS=darwin
+export GOARCH=amd64
 compile
 
-GOOS=linux GOARCH=arm GOARM=7
+export GOOS=linux
+export GOARCH=amd64
 compile
 
-GOOS=linux GOARCH=386
+export GOOS=linux
+export GOARCH=arm
+export GOARM=7
 compile

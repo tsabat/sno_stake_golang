@@ -10,12 +10,13 @@ Let's make a recording of the snow stake each time it changes.  Cause we can.
 
 # how to install?
 
-this is golang, motherfucker!  It is cross-compiled!  The base of this project has three files.
+this is golang, motherfucker!  It is cross-compiled!  Choose your arch from `builds/*` and you're gtg.  The following builds are available.
+
 
 ```
-stake-darwin-386
-stake-linux-386
-stake-linux-arm
+darwin-amd64/stake
+linux-amd64/stake
+linux-arm/stake
 ```
 
 Pick your executable and run it.

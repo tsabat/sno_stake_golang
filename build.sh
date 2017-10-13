@@ -3,20 +3,7 @@
 # instructions taken from here:
 # http://golangcookbook.com/chapters/running/cross-compiling/
 
-function compile() {
-  go build -o "stake-$GOOS-$GOARCH" -x stake.go
-}
-
-
-export GOOS=darwin
-export GOARCH=amd64
-compile
-
-export GOOS=linux
-export GOARCH=amd64
-compile
-
-export GOOS=linux
-export GOARCH=arm
-export GOARM=7
-compile
+cmd="go build -o stake-\$GOOS-\$GOARCH -x stake.go"
+GOOS=darwin GOARCH=amd64       eval "$cmd"
+GOOS=linux  GOARCH=amd64       eval "$cmd"
+GOOS=linux  GOARCH=arm GOARM=7 eval "$cmd"
